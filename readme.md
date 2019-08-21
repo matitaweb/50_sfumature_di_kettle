@@ -63,6 +63,9 @@ Elenco dei prossimi argomenti
     esempio voglio fare delgi inserimenti su una tabella padre e poi gli inserimenti su una tabella figlia, utilizzando il 
     blocking step non blocco il secondo table input poichè IL TABLE INPUT SE NON HA PARAMETRI DI INPUT che non gli arrivano 
     inizia subito.
+    
+    
+    
 
 
 - per chiamare una procedura in oracle creare una funzione che invoca il package, 
@@ -71,4 +74,11 @@ Elenco dei prossimi argomenti
 
 
 - come utilizzare il JNDI con kettle, pentaho server, pentaho report designer
+
+- Pentaho Spoon - ORA-12505 "No SID" Error When trying to connect to an Oracle DB
+Errore connessione oracle se non si usa il service name
+-https://communities.bmc.com/thread/141761?start=0&tstart=0
+usare solo il campo "Database Name" inserendo la dicitura da tnsnames.ora
+(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST =xxx.xxx.xxx.xxx)(PORT = xxxx))(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME =xxxx)))  
+
  

@@ -1,16 +1,50 @@
-# 50 sfumature di KETTLE
+# 50 sfumature di Pentaho Data Integration (KETTLE per i nostalgici)
 
-un elenco di esperimenti raggruppati per cartella su pentaho KETTLE versione 8+
+Questo documento vuole essere un elenco di esperimenti, ricette, e casi strani
+raggruppati per cartella su Pentaho Data Integration (PDI da ora in poi o KETTLE per 
+chi ha un po di anni di ETL alle spalle) a partire dalla versione 8+
+
+## Prima di cominciare
+
+### Documentazione
+La documentazione ufficiale la trovi 
+https://help.pentaho.com/Documentation
+Non è il massimo della chiarezza però e quella ufficiale.
+
+Si trova molta documentazione sparsa in giro allego qualche link che mi ha aiutato in momenti difficili:
+https://e-l.unifi.it/pluginfile.php/567662/mod_resource/content/1/IntroPentahoDataIntegrationKettle_AB.pdf
+
+### Libiri (letti)
+Qualche libro che ho letto:
+- Learning Pentaho Data Integration 8 CE - Third Editio
+- Pentaho 8 Reporting for Java Developers
+
+### Comunity
+- Quella ufficiale la trovi a questo link https://community.hitachivantara.com/s/
+- https://forums.pentaho.com/forums/259-Italian/
 
 
+## Ricette
+Un elenco sparso di appunti presi durante questi anni di utilizzo dello strumento.
 
-documentazione
+
+### Dove scaricare PDI (Kettle per i nostalgici...)
+A questo indirizzo trovare la versione commerciale e l'azienda che lo supporta (lasciate perdere)
+https://www.hitachivantara.com/
+
+A questo indirizzo trovare quello che vi serve
+https://sourceforge.net/projects/pentaho/files/
 
 
-Argomenti
-
+PDI è un applicativo client che trovi a questo indirizzo
+https://sourceforge.net/projects/pentaho/files/Pentaho%208.3/client-tools/
 
 Radunare 50 esempi di soluzioni ideate da me e da giovanni con kettle su github
+
+### installare i driver
+Purtroppo per questioni di licenze PDI non comprende molti driver che debbono essere installati a mano:
+
+
 
 
 ### DECRIPT DELLA PASSWORD SALVATE NEI FILE KETTLE

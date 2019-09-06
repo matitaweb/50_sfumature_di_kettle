@@ -115,4 +115,8 @@ Errore connessione oracle se non si usa il service name
 usare solo il campo "Database Name" inserendo la dicitura da tnsnames.ora
 (DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST =xxx.xxx.xxx.xxx)(PORT = xxxx))(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME =xxxx)))  
 
+
+- comer risolvere ( java.lang.OutOfMemoryError: Java heap space)
+http://renattomachado.azurewebsites.net/2016/01/19/solve-java-heap-space-at-pentaho/
+
  

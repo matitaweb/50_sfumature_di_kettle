@@ -118,5 +118,6 @@ usare solo il campo "Database Name" inserendo la dicitura da tnsnames.ora
 
 - comer risolvere ( java.lang.OutOfMemoryError: Java heap space)
 http://renattomachado.azurewebsites.net/2016/01/19/solve-java-heap-space-at-pentaho/
+if "%PENTAHO_DI_JAVA_OPTIONS%"=="" set PENTAHO_DI_JAVA_OPTIONS="-Xms2048m" "-Xmx4096m" "-XX:MaxPermSize=1024m"
 
  

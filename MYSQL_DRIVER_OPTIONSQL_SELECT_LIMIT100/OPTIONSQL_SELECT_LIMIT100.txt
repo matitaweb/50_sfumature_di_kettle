@@ -1,0 +1,14 @@
+# ERRORE DRIVER MY SQL 'OPTION SQL_SELECT_LIMIT=100'
+
+L'errore si presenta, in un table output, durante la mappatura delle colonne provenienti da un table input che si connette a mysql.
+ERRORE
+"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OPTION SQL_SELECT_LIMIT=100' at line 1"
+
+Per correggere l'errore basta aggiornare il driver mysql vedi all'ultimo disponibile 
+mysql-connector-java-5.x.x-bin.jar
+
+
+
+### FONTI
+https://forums.pentaho.com/threads/225047-MYSQL-Error-with-CDE-7-1/
+https://stackoverflow.com/questions/28457877/pentaho-kettle-enter-field-mapping-error

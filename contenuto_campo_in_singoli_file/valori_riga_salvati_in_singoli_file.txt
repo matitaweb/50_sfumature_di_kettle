@@ -1,0 +1,4 @@
+Se avede dei campi testo in una colonna e volete salvarli in singoli file
+basta cliccare "Accettare in nome file del campo"
+in questo modo ad ogni riga processata dal passo precedente viene creato un file 
+con un contenuto deciso nel tab  'CONTENUTO'

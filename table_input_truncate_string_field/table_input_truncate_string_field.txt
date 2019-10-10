@@ -1,0 +1,45 @@
+
+TABLE OUTPUT "Truncating %d symbols of original message in '%s' field"
+---------------------------------------------------------------------
+
+Durante il caricamento dei dati in un clob è possibile che vengano troncati.
+Nel log di esempio ha perso 1.449.793 di caratteri ne portare in un carattere stringa in una tabella oracle 
+con un campo CLOB di nome campo_json.
+Esempio.
+2019/10/01 14:34:31 - ValueMetaBase - Truncating 1449793 symbols of original message in 'campo_json' field
+
+Attenzione: il dato viene troncato in scrittura, il table input carica correttamente il contenuto del campo 'campo_json'
+
+
+La troncatura è nel file vedi nel file 
+https://github.com/pentaho/pentaho-kettle/blob/master/core/src/main/java/org/pentaho/di/core/row/value/ValueMetaBase.java alla riga 5385
+
+String string = getString( data );
+
+	  int maxlen = databaseMeta.getMaxTextFieldLength();
+	  int len = string.length();
+
+	  // Take the last maxlen characters of the string...
+	  int begin = Math.max( len - maxlen, 0 );
+	  if ( begin > 0 ) {
+		// Truncate if logging result if it exceeds database maximum string field length
+		log.logMinimal( String.format( "Truncating %d symbols of original message in '%s' field", begin, getName() ) );
+		string = string.substring( begin );
+	  }
+
+	  if ( databaseMeta.supportsSetCharacterStream() ) {
+		preparedStatement.setCharacterStream( index, new StringReader( string ), string.length() );
+	  }....
+
+Riguarda prepared statement STRINGA, purtroppo kettle ha identificato con un massimo di 10M la dimensione 
+massima dei 
+vedi qua:
+https://javadoc.pentaho.com/kettle/constant-values.html#org.pentaho.di.core.database.DatabaseMeta.CLOB_LENGTH
+
+
+
+LA SOLUZIONE:
+esportiamo i campo json in un file e carichiamolo separatamente via java
+vedi esperimento in spring boot batch 
+https://github.com/matitaweb/spring-boot-batch_clobloader_oracle
+

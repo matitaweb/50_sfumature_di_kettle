@@ -1,0 +1,51 @@
+
+Avvio su una pentaho pan su una macchina
+
+less /etc/os-release
+*****************************
+NAME="Oracle Linux Server"
+VERSION="7.7"
+ID="ol"
+ID_LIKE="fedora"
+VARIANT="Server"
+VARIANT_ID="server"
+VERSION_ID="7.7"
+PRETTY_NAME="Oracle Linux Server 7.7"
+ANSI_COLOR="0;31"
+HOME_URL="https://linux.oracle.com/"
+BUG_REPORT_URL="https://bugzilla.oracle.com/"
+
+ORACLE_BUGZILLA_PRODUCT="Oracle Linux 7"
+ORACLE_BUGZILLA_PRODUCT_VERSION=7.7
+ORACLE_SUPPORT_PRODUCT="Oracle Linux"
+ORACLE_SUPPORT_PRODUCT_VERSION=7.7
+*****************************
+
+ /pentaho/pdi-ce_8.3/pan.sh -file=sample.ktr 
+
+#######################################################################
+WARNING:  no libwebkitgtk-1.0 detected, some features will be unavailable
+    Consider installing the package with apt-get or yum.
+    e.g. 'sudo apt-get install libwebkitgtk-1.0-0'
+#######################################################################
+
+
+
+https://unix.stackexchange.com/questions/182603/how-to-install-webkitgtk1-on-rhel7
+https://community.hitachivantara.com/s/question/0D51J00004fdAeASAU/pentaho-pdi-8-libwebkit-error
+
+webkitgtk 
+se il comando [yum install webkitgtk] nion funziona allora va scaricato il package rpm 
+
+rpm -ivh webkitgtk-2.4.9-3.el7.nux.x86_64.rpm
+warning: webkitgtk-2.4.9-3.el7.nux.x86_64.rpm: Header V4 RSA/SHA1 Signature, key ID 85c6cd8a: NOKEY
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:webkitgtk-2.4.9-3.el7.nux        ################################# [100%]
+
+
+
+http://rpm.pbone.net/index.php3?stat=3&search=webkitgtk&srodzaj=3&dist[]=93
+
+
+
